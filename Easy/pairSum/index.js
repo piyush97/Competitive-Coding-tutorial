@@ -63,16 +63,7 @@ const pairFindWithSorting = (array, sum) => {
 const pairFindWithHash = (array, sum) => {
   let hash = {};
   let index = 0;
-  //   for (index in array) {
-  //     if (Object.values(hash) === sum - array[index]) {
-  //       console.log(`Pair found (${hash["sum-array[index]"]}, ${array[index]})`);
-  //       return;
-  //     }
-  //     console.log(
-  //       `Hash${Object.values(hash)}, SUM - Array[index] = ${sum - array[index]}`
-  //     );
-  //     hash[index] = array[index];
-  //   }
+
   let results = [];
 
   for (index in array) {
