@@ -26,3 +26,24 @@ export const sort = (array) => {
   }
   return array;
 };
+/**
+ * Instead of counting the total number of zeroes,
+ * if the current element is 0, we can place 0 at the next available position in the array.
+ * After all elements in the array are processed, we fill all remaining indices by 1.
+ *
+ */
+export const sort2 = (array) => {
+  // j stores the index of the next available position
+  let j = 0;
+  let index = 0;
+  for (index in array) {
+    // if the current element is zero, put 0 at the next free
+    // position in the array
+    if (array[index] === 0) array[j++] = 0;
+  }
+  // fill all remaining indices by 1
+  for (let i = j; i < array.length; i++) {
+    array[j++] = 1;
+  }
+  return array;
+};
