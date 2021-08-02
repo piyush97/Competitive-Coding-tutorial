@@ -3,7 +3,7 @@
  * Time Complexity O(n)
  * @param {[]} array
  */
-const sort = (array) => {
+export const sort = (array) => {
   // count number of 0's
   let zeros = 0;
   for (let i = 0; i < array.length; i++) {
@@ -24,7 +24,7 @@ const sort = (array) => {
   while (k < array.length) {
     array[k++] = 1;
   }
-  console.log(array);
+  return array;
 };
 
 console.time("Time Taken by BruteForce");
