@@ -1,4 +1,4 @@
-# [Coding Interview / Competitive Coding Tutorials for total beginners](https://www.youtube.com/watch?v=n3I-Lw9pkfU&list=PLpkrMokklzr0AyKje3Ev6xpC4jAgKDOr-)
+# [Coding Interview/DSA Tutorials for Complete Beginners](https://www.youtube.com/watch?v=n3I-Lw9pkfU&list=PLpkrMokklzr0AyKje3Ev6xpC4jAgKDOr-)
 
 [![codecov](https://codecov.io/gh/piyush97/Competitive-Coding-tutorial/branch/main/graph/badge.svg?token=yqY1m6fje9)](https://codecov.io/gh/piyush97/Competitive-Coding-tutorial)
 
