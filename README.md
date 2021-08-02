@@ -1,10 +1,13 @@
 # Coding Interview / Competitive Coding Tutorials for total beginners
 
+[![codecov](https://codecov.io/gh/piyush97/Competitive-Coding-tutorial/branch/main/graph/badge.svg?token=yqY1m6fje9)](https://codecov.io/gh/piyush97/Competitive-Coding-tutorial)
+
+
 ### Questions Type
 
-- Easy
-- Medium
-- Hard
+- [Easy](/Easy)
+- [Medium](/Medium)
+- [Hard](/Hard)
 
 Language used JS or TS
 
