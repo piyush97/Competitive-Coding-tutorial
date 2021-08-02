@@ -4,17 +4,15 @@
  * @param {[]} array
  * @param {number} sum
  */
-const pairFind = (array, sum) => {
-  console.log(`Pair find with brute force method`);
+export const pairFind = (array, sum) => {
   for (let i = 0; i < array.length; i++) {
     for (let j = 1; j <= array.length; j++) {
       if (array[i] + array[j] === sum) {
-        console.log(`Pair found (${array[i]}, ${array[j]})`);
-        return;
+        return [array[i], array[j]];
       }
     }
   }
-  console.log(`Pair not found`);
+  return false;
 };
 
 /**
@@ -24,7 +22,7 @@ const pairFind = (array, sum) => {
  * @param {*} sum
  * @return {*}
  */
-const pairFindWithSorting = (array, sum) => {
+export const pairFindWithSorting = (array, sum) => {
   // sort the array in ascending order
   array.sort();
 
@@ -37,8 +35,7 @@ const pairFindWithSorting = (array, sum) => {
     // if sum is found, return the pair
     if (array[low] + array[high] === sum) {
       // Sum Found
-      console.log(`Pair found (${array[low]}, ${array[high]})`);
-      return;
+      return [array[low], array[high]];
     }
     //   increment `low` index if the total is less than the desired sum;
     // decrement `high` index if the total is more than the desired sum
@@ -47,7 +44,7 @@ const pairFindWithSorting = (array, sum) => {
       low = low + 1;
     } else high = high - 1;
   }
-  console.log("Pair not found");
+  return false;
 };
 
 // Using Hashing or JSON
@@ -60,7 +57,7 @@ const pairFindWithSorting = (array, sum) => {
  * @param {*} sum
  * @return {*}
  */
-const pairFindWithHash = (array, sum) => {
+export const pairFindWithHash = (array, sum) => {
   let hash = {};
   let index = 0;
 
@@ -69,19 +66,13 @@ const pairFindWithHash = (array, sum) => {
   for (index in array) {
     if (hash[array[index]]) {
       results.push([hash[array[index]], array[index]]);
-      console.log(`Pair found ${hash[array[index]]}, ${array[index]}`);
     } else {
       hash[sum - array[index]] = array[index];
     }
   }
-  results === [] && console.log("Pair not found");
+  if (results === []) {
+    return false;
+  } else {
+    return results;
+  }
 };
-console.time(`With Brute Force`);
-pairFind([8, 7, 2, 5, 3, 1], 10);
-console.timeEnd(`With Brute Force`);
-console.time(`With Sorting`);
-pairFindWithSorting([8, 7, 2, 5, 3, 1], 10);
-console.timeEnd(`With Sorting`);
-console.time(`With Hash`);
-pairFindWithHash([8, 7, 2, 5, 3, 1], 10);
-console.timeEnd(`With Hash`);
