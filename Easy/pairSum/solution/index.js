@@ -70,9 +70,5 @@ export const pairFindWithHash = (array, sum) => {
       hash[sum - array[index]] = array[index];
     }
   }
-  if (results === []) {
-    return false;
-  } else {
-    return results;
-  }
+  return results;
 };
