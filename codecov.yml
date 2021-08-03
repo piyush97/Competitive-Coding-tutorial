@@ -1,0 +1,3 @@
+ignore:
+  - "**/**/problem/*"  # ignore folders and all its contents for problems
+ 
