@@ -8,7 +8,7 @@
     "start": "node CLI/index.js",
     "checkAnswer": "jest ",
     "dev": "nodemon CLI/index.js",
-    "test": "jest --coverage=true --coverageReporters=cobertura",
+    "test": "jest **/**/solution/* --coverage=true --coverageReporters=cobertura",
     "test:watch": "jest --watchAll"
   },
   "dependencies": {
