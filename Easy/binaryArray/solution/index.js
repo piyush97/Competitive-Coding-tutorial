@@ -47,3 +47,41 @@ export const sort2 = (array) => {
   }
   return array;
 };
+
+// We can also solve this problem in linear time by using the partitioning logic of Quicksort
+// The idea is to use 1 as a pivot element and make one pass of the partition process.
+//  The resultant array will be sorted.
+
+/**
+ * Utility function to swap elements i and j in an array
+ *
+ * @param {[]} array
+ * @param {number} i element
+ * @param {number} j elemnt
+ */
+const swap = (array, i, j) => {
+  let temp = array[i];
+  array[i] = array[j];
+  array[j] = temp;
+};
+
+export const sort3 = (array, n) => {
+  // choosing pivot as 1, so making the zeros on the left side of 1, if you choose pivot as 1 then
+  // make the condition as array[i]> pivot
+  let pivot = 1;
+  // j is another index to track
+  let j = 0;
+
+  // each time we encounter a 0, `j` is incremented, and
+  // 0 is placed before the pivot
+  let i = 0;
+  for (i in array) {
+    if (array[i] < pivot) {
+      swap(array, i, j);
+      j++;
+    }
+  }
+  return array;
+};
+
+console.log(sort3([0, 1, 0, 1]));
