@@ -1,4 +1,4 @@
-import { sort, sort2 } from "./index";
+import { sort, sort2, sort3 } from "./index";
 describe("Binary Array Solution Test", () => {
   it("should return binary array in linear time", () => {
     const array = [0, 1, 1, 1, 1, 0];
@@ -18,5 +18,8 @@ describe("Binary Array Solution Test", () => {
 
     expect(sort2(array2)).toEqual(expect.arrayContaining(sortedArray2));
     expect(sort2(array2).length).toBe(sortedArray2.length);
+
+    expect(sort3(array2)).toEqual(expect.arrayContaining(sortedArray2));
+    expect(sort3(array2).length).toBe(sortedArray2.length);
   });
 });
