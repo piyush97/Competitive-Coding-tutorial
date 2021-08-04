@@ -6,10 +6,10 @@
   "type": "module",
   "scripts": {
     "start": "node CLI/index.js",
-    "checkAnswer": "jest ",
+    "checkAnswer": "jest **/**/problem/*",
     "dev": "nodemon CLI/index.js",
     "test": "jest **/**/solution/* --coverage=true --coverageReporters=cobertura",
-    "test:watch": "jest --watchAll"
+    "test:watch": "jest **/**/solution/* --watchAll"
   },
   "dependencies": {
     "chalk": "^4.1.2",
