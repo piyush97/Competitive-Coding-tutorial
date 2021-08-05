@@ -1,4 +1,4 @@
-import { maxProd } from "./index";
+import { maxProd, maxProdSort } from "./index";
 describe("Maximum Product in an Array", () => {
   it("should return The pair", () => {
     const simpleArray = [1, 2, 3, 4, 5];
@@ -8,5 +8,8 @@ describe("Maximum Product in an Array", () => {
 
     expect(maxProd(simpleArray)).toEqual(simpleProd);
     expect(maxProd(negativeArray)).toEqual(negativeProd);
+
+    expect(maxProdSort(simpleArray)).toStrictEqual([5, 4]);
+    expect(maxProdSort(negativeArray)).toStrictEqual([6, 5]);
   });
 });
