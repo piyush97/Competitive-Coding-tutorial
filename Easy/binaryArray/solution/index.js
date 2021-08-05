@@ -83,5 +83,3 @@ export const sort3 = (array, n) => {
   }
   return array;
 };
-
-console.log(sort3([0, 1, 0, 1]));
