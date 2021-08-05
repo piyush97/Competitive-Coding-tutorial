@@ -3,7 +3,7 @@
  * Time Complexity is O(n^2)
  *
  * @param {*} array
- * @return {*}
+ * @return {[]}
  */
 export const maxProd = (array) => {
   let maxProd = 0,
@@ -22,6 +22,13 @@ export const maxProd = (array) => {
   return [array[maxIndex], array[maxNext]];
 };
 
+/**
+ * Maximum product in an array
+ * Time Complexity is O(n.log(n))
+ *
+ * @param {*} array
+ * @return {[]}
+ */
 export const maxProdSort = (array) => {
   array.sort();
   if (array[0] * array[1] > array[array.length - 1] * array[array.length - 2]) {
